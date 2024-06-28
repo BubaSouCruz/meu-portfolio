@@ -1,0 +1,93 @@
+.perfil-container {
+    width: 256px;
+    height: 256px;
+    overflow: hidden;
+    border-radius: 50%; /* Transforma em um círculo */
+    margin: 40px; /* Adiciona margem para espaçamento */
+    float: left; /* Alinha a imagem no canto esquerdo */
+    box-sizing:content-box
+}
+
+.imagemperfil {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.header {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+}
+
+body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 20px; /* Adiciona um espaçamento interno na página */
+    }
+
+    .main-content {
+        max-width: 800px; /* Define uma largura máxima para o conteúdo principal */
+        margin: 20px auto; /* Centraliza o conteúdo principal e adiciona margem nas laterais */
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+h3 {
+    font-size: 48px;
+    font-family: 'Playwrite NG Modern', sans-serif; /* Aplicando a fonte na seção Sobre Mim */
+    color: cadetblue;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Playwrite NG Modern', sans-serif; 
+    font-size: 54px;
+    color: cadetblue
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Ajuste conforme necessário */
+    justify-content: center; /* Centraliza no eixo horizontal */
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #42ed81;
+
+}
+
+footer {
+    background-color: #97adee;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 40px; /* Adiciona margem superior para separar o footer do conteúdo principal */
+}
