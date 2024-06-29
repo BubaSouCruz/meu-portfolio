@@ -1,11 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background 0.2s linear;
+    background: #fff;
+    color: #333;
+}
+
+body.dark {
+    background: #232c35;
+    color: #fff;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
 .perfil-container {
     width: 256px;
     height: 256px;
     overflow: hidden;
-    border-radius: 50%; /* Transforma em um círculo */
-    margin: 40px; /* Adiciona margem para espaçamento */
-    float: left; /* Alinha a imagem no canto esquerdo */
-    box-sizing:content-box
+    border-radius: 50%;
+    margin: 20px auto;
+    box-sizing: content-box;
 }
 
 .imagemperfil {
@@ -15,46 +43,85 @@
     object-fit: cover;
 }
 
-.header {
-    background-color: #f0f0f0;
-    padding: 10px 20px;
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        padding: 20px; /* Adiciona um espaçamento interno na página */
-    }
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
 
-    .main-content {
-        max-width: 800px; /* Define uma largura máxima para o conteúdo principal */
-        margin: 20px auto; /* Centraliza o conteúdo principal e adiciona margem nas laterais */
-        padding: 20px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-    }
+.label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
 
-h3 {
-    font-size: 48px;
-    font-family: 'Playwrite NG Modern', sans-serif; /* Aplicando a fonte na seção Sobre Mim */
-    color: cadetblue;
-    margin: 0;
-    padding: 0;
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
 }
 
 h1 {
-    font-family: 'Playwrite NG Modern', sans-serif; 
+    font-family: 'Playwrite NG Modern', sans-serif;
     font-size: 54px;
-    color: cadetblue
+    color: cadetblue;
+}
+
+h2 {
+    font-size: 24px;
+    color: #555;
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 36px;
+    font-family: 'Playwrite NG Modern', sans-serif;
+    color: cadetblue;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+section#projetos .projeto {
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    max-width: 400px; /* Ajuste conforme necessário */
-    justify-content: center; /* Centraliza no eixo horizontal */
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 label {
@@ -63,7 +130,7 @@ label {
 
 input, textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -77,17 +144,15 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    align-items: center;
 }
 
 button:hover {
-    background-color: #42ed81;
-
+    background-color: #45a049;
 }
 
 footer {
     background-color: #97adee;
     text-align: center;
-    padding: 10px 20px;
-    margin-top: 40px; /* Adiciona margem superior para separar o footer do conteúdo principal */
+    padding: 20px;
+    margin-top: 40px;
 }

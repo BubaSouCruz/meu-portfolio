@@ -17,23 +17,25 @@
 </head>
 <body>
     <header>
-        <h1>Bruna Souza</h1>
-        <h2><i class="fa-solid fa-laptop-code"></i> Desenvolvedora Web | Designer UI / UX </h2> <div class="desenvolvedora">
-            <img src="/desenvolvedor.png" alt="Foto de Bruna Souza" class="dev">
+        <div class="toggle-container">
+            <input type="checkbox" class="checkbox" id="check">
+            <label class="label" for="check">
+                <div class="ball"></div>
+            </label>
         </div>
-        <h4>Transformando ideias em realidade digital &lt;/&gt;</h4>
-
+        <h1>Bruna Souza</h1>
+        <h2><i class="fa-solid fa-laptop-code"></i> Desenvolvedora Web | Designer UI / UX </h2> 
         <div class="perfil-container">
             <img src="/fotoBruna.jpg" alt="Foto de Bruna Souza" class="imagemperfil">
         </div>
-        
+        <h4>Transformando ideias em realidade digital &lt;/&gt;</h4>
     </header>
-    
     <section id="sobre">
         <h3>Sobre Mim</h3>
-        <p>Descrição breve sobre você...</p>
+        <p>Sou a Bruna,</p>
+        Atualmnente migrando de carreira, focando em programação. Já atuei como Analista de Operações, Implantação de software e agora
+        estou desenvolvendo.
     </section>
-    
     <section id="projetos">
         <h3>Meus Projetos</h3>
         <div class="projeto">
@@ -43,37 +45,28 @@
         </div>
         <!-- Adicione mais projetos conforme necessário -->
     </section>
-    
     <section id="contato">
         <h3>Contato</h3>
         <form action="envio-email.php" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
-            
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
             <label for="telefone">Telefone:</label>
             <input type="tel" name="telefone" id="telefone">
-            
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" required></textarea>
-            
             <button type="submit">Enviar</button>
         </form>
     </section>
-
-    <!-- Elementos de comunicação -->
-    <div class="whatsapp">
-        <img src="whatsapp.png" alt="whatsapp" class="whats">
-    </div>
-
-    <div class="instagram">
-        <img src="instagram.png" alt="instagram" class="insta">
-    </div>
-
     <footer>
         <p>&copy; 2024. Bruna Souza. Todos os direitos reservados.</p>
     </footer>
+    <script>
+        const checkbox = document.getElementById('check');
+        checkbox.addEventListener('change', () => {
+            document.body.classList.toggle('dark');
+        });
+    </script>
 </body>
 </html>
